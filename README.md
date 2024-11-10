@@ -25,8 +25,6 @@ Install pustaka yang diperlukan:
 pip install transformers torch numpy
 ```
 
----
-
 ## 🚀 Model dan Tokenisasi
 Model yang digunakan adalah DistilBERT (distilbert-base-uncased-finetuned-sst-2-english) dari pustaka Hugging Face. Model ini telah dilatih untuk tugas klasifikasi sentimen pada bahasa Inggris.
 
@@ -83,29 +81,21 @@ sentiment, confidence = analyze_sentiment(text)
 print(f"Sentiment: {sentiment}, Confidence: {confidence:.2f}")
 ```
 
----
-
 ## 📊 Contoh Analisis Sentimen
 Berikut adalah dua contoh untuk memahami bagaimana model memprediksi sentimen dari suatu teks:
 
 ### Contoh 1
 
-Teks: "I love playing Ragnarok Online, but the probability drop item is frustrating!"
-
-Hasil: Sentimen Negatif dengan keyakinan 1.00
-
-Analisis: Meski kata "love" mengindikasikan aspek positif, model menangkap keluhan terkait "probability drop item" yang menggambarkan frustrasi terhadap game.
+- Teks: "I love playing Ragnarok Online, but the probability drop item is frustrating!"
+- Hasil: Sentimen Negatif dengan keyakinan 1.00
+- Analisis: Meski kata "love" mengindikasikan aspek positif, model menangkap keluhan terkait "probability drop item" yang menggambarkan frustrasi terhadap game.
 
 
 ### Contoh 2
 
-Teks: "I enjoy playing MMORPGs because they make me feel great!"
-
-Hasil: Sentimen Positif dengan keyakinan 1.00
-
-Analisis: Frasa "make me feel great" memberikan indikasi positif yang kuat, sehingga model memprediksi sentimen positif.
-
----
+- Teks: "I enjoy playing MMORPGs because they make me feel great!"
+- Hasil: Sentimen Positif dengan keyakinan 1.00
+- Analisis: Frasa "make me feel great" memberikan indikasi positif yang kuat, sehingga model memprediksi sentimen positif.
 
 ## 📌 Kesimpulan
 Model ini cukup andal dalam mendeteksi sentimen positif atau negatif, terutama pada kalimat yang memiliki kata atau frasa dengan makna kuat. Namun, pada teks yang ambigu atau rumit, hasil prediksi mungkin tidak sepenuhnya akurat, karena model ini hanya mengklasifikasikan teks ke dalam dua kelas (positif dan negatif) tanpa mempertimbangkan konteks yang lebih dalam.
